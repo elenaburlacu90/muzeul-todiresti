@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel='icon' href="../images/logo1.png">
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <title>Muzeul Virtual Todirești</title>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+            Muzeul Virtual Todirești
+            <i class="fas fa-landmark logo"></i>
+        </a>
+        <i id="menu-btn" class="fas fa-bars" onclick="show()"></i>
+    </header>
+
+    <div class="page-container">
+        <aside id="side-menu">
+            <a href="../index.html">Pagina principală</a>
+            <a href="oamenisidestine.html">Oameni și destine</a>
+            <a href="asaaratatimpul.html">Așa arată timpul</a>
+            <a href="desprenoi.html">Despre noi</a>
+            <a href="galerie.html">Galerie</a>
+            <a href="contacte.html">Contacte</a>
+        </aside>
+        <main>
+            <h2 class="title">Contacte</h2>
+            <div class="row">
+                <div class="col-50">
+                    <h3>Contactează-ne dacă: </h3>
+                    <ul class="intrebari-contacte">
+                        <li>Dorești să împărtășești o amintire valoroasă</li>
+                        <li>Ai pe cineva care poate împărtăși povestea sa</li>
+                        <li>Dorești să promovezi localitatea ta</li>
+                        <li>Ai sugestii sau îmbunătățiri</li>
+                    </ul>
+                </div>
+                <div class="col-50">
+                    <h3>Date de contact</h3>
+                    <ul class="intrebari-contacte">
+                        <li><b>Adresa: </b> s. Todiresti, rl Ungheni</li>
+                        <li><b>Telefon: </b> 023649233</li>
+                        <li><b>Ore de lucru: </b> 08:00-17:00</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-50">
+                    <div class="contact-form">
+                        <form>
+                            <h3 class="center">Lasă un mesaj</h3>
+                            <input type="text" placeholder="Nume" required />
+                            <input type="e-mail" placeholder="E-mail" required />
+                            <textarea rows="3" type submit placeholder="Mesaj" required></textarea>
+                            <input type="Submit" value='Transmite' />
+                        </form>
+                    </div>
+                </div>
+                <div class="col-50">
+                    <iframe class="map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9255.60426286435!2d27.812558542568024!3d47.31757900232339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40cb06826748921b%3A0xd541c41c667d290e!2sTodire%C5%9Fti%2C%20Moldova!5e1!3m2!1sro!2s!4v1629142885853!5m2!1sro!2s"
+                        allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    <script src="../js/main.js"></script>
+    <footer class="footer">
+        <span> Comuna Todirești </span>
+    </footer>
+</body>
+
+</html>
