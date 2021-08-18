@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <title>Muzeul Virtual Todirești</title>
 </head>
 
@@ -53,14 +54,12 @@
             <div class="row">
                 <div class="col-50">
                     <div class="contact-form">
-                        <form action="https://formbubmit.co/ellena.burllacu@gmail.com" method="POST">
-                            <input type="hidden" name="_subject" value="Mesaj nou!">
-                            <input type="hidden" name="_autoresponse" value="Mulțumim pentru mesaj! Să ai o zi frumoasă!">
+                        <form>
                             <h3 class="center">Lasă un mesaj</h3>
-                            <input type="text" placeholder="Nume" required />
-                            <input type="e-mail" placeholder="E-mail" required />
-                            <textarea rows="3" type submit placeholder="Mesaj" required></textarea>
-                            <input type="Submit" value='Transmite' />
+                            <input type="text" placeholder="Nume" required id="nume" />
+                            <input type="email" placeholder="E-mail" required id="email" />
+                            <textarea rows="3" type submit placeholder="Mesaj" required id="mesaj"></textarea>
+                            <input type="Submit" value='Transmite' onclick="send()" />
                         </form>
                     </div>
                 </div>
@@ -77,6 +76,23 @@
     <footer class="footer">
         <span> Comuna Todirești </span>
     </footer>
+    <script>
+        emailjs.init('user_1mgENoh4h74qPMHNBFAJc')
+        function send() {
+            var date = {
+                nume: document.getElementById('nume').value, 
+                email: document.getElementById('email').value,
+                mesaj: document.getElementById('mesaj').value,
+            };
+
+            emailjs.send('service_5uh1vqw', 'template_ie45wqi', date)
+                .then(function (raspuns) {
+                    alert('Mesajul a fost transmis.')
+                }, function (error) {
+                    alert('Eroare la transmitere. Reincercați mai târziu')
+                } )
+        }
+    </script>
 </body>
 
 </html>
